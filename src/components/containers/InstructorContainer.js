@@ -20,6 +20,7 @@ class InstructorContainer extends Component {
       redirect: false,
       firstname: this.props.instructor.firstname,
       lastname: this.props.instructor.lastname,
+      imageUrl: this.props.instructor.imageurl,
       department: this.props.instructor.department,
     };
   }
@@ -43,6 +44,7 @@ class InstructorContainer extends Component {
         id: this.props.match.params.id,
         firstname: this.state.firstname,
         lastname: this.state.lastname,
+        imageUrl: this.state.imageurl,
         department: this.state.department
     };
     

@@ -9,7 +9,8 @@ const InstructorView = (props) => {
 
   return (
     <div>      
-      <h1>{instructor.firstname}</h1>
+      <h1>{instructor.firstname + " " + instructor.lastname}</h1>
+      {instructor.imageUrl ? <img src={instructor.imageUrl} alt="test" width = "300" height = "300" ></img>: <div></div>}
       <h3>{instructor.department}</h3>
       <div style={{display: "flex", flexDirection: "row", justifyContent: "space-evenly"}}>
         <div>Assigned courses:
@@ -34,6 +35,7 @@ const InstructorView = (props) => {
             </div>
           );
         })}</div>
+
         <div >
         <form style={{textAlign: 'center'}} onSubmit={(e) => handleSubmit(e)}>
             <label style= {{color:'#11153e', fontWeight: 'bold'}}>FirstName: </label>
@@ -48,6 +50,11 @@ const InstructorView = (props) => {
   
             <label style={{color:'#11153e', fontWeight: 'bold'}}>Department: </label>
             <input type="text" name="department" onChange={(e) => handleChange(e)} />
+            <br/>
+            <br/>
+
+            <label style={{color:'#11153e', fontWeight: 'bold'}}>ImageUrl: </label>
+            <input type="text" name="imageurl" onChange={(e) => handleChange(e)} />
             <br/>
             <br/>
   
