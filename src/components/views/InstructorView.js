@@ -3,10 +3,10 @@ import { deleteInstructor } from "../../store/actions/actionCreators";
 
 
 const InstructorView = (props) => {
-  const {instructor, editCourse, allCourses, removeInstructor } = props;
+  const {instructor, editCourse, allCourses, removeInstructor, handleChange, handleSubmit } = props;
   let assignedCourses = allCourses.filter(course => course.instructorId===instructor.id);
   let availableCourses = allCourses.filter(course => course.instructorId!==instructor.id);
-  
+
   return (
     <div>      
       <h1>{instructor.firstname}</h1>
@@ -34,7 +34,30 @@ const InstructorView = (props) => {
             </div>
           );
         })}</div>
-
+        <div >
+        <form style={{textAlign: 'center'}} onSubmit={(e) => handleSubmit(e)}>
+            <label style= {{color:'#11153e', fontWeight: 'bold'}}>FirstName: </label>
+            <input type="text" name="firstname" onChange ={(e) => handleChange(e)} />
+            <br/>
+            <br/>
+  
+            <label style={{color:'#11153e', fontWeight: 'bold'}}>LastName: </label>
+            <input type="text" name="lastname" onChange={(e) => handleChange(e)} />
+            <br/>
+            <br/>
+  
+            <label style={{color:'#11153e', fontWeight: 'bold'}}>Department: </label>
+            <input type="text" name="department" onChange={(e) => handleChange(e)} />
+            <br/>
+            <br/>
+  
+            <button type="submit">
+              Submit
+            </button>
+            <br/>
+            <br/>
+          </form>
+        </div>
         <button onClick={() => removeInstructor()}>delete</button>
 
       </div>
