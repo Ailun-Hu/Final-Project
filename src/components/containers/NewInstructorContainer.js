@@ -13,6 +13,8 @@ class NewInstructorContainer extends Component {
             firstname: "",
             lastname: "",
             department: "",
+            redirect: false,
+            redirectId: null
         };
     }
 

@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import { deleteInstructor } from "../../store/actions/actionCreators";
 
 
 const InstructorView = (props) => {
-  const {instructor, editCourse, allCourses} = props;
+  const {instructor, editCourse, allCourses, removeInstructor } = props;
   let assignedCourses = allCourses.filter(course => course.instructorId===instructor.id);
   let availableCourses = allCourses.filter(course => course.instructorId!==instructor.id);
   
@@ -33,6 +34,8 @@ const InstructorView = (props) => {
             </div>
           );
         })}</div>
+
+        <button onClick={() => removeInstructor()}>delete</button>
 
       </div>
 

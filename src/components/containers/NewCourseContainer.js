@@ -36,7 +36,7 @@ class NewCourseContainer extends Component {
         };
         
         let newCourse = await this.props.addCourse(course);
-        
+
         this.setState({
           title: this.state.title,
           timeslot: this.state.timeslot,

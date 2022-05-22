@@ -1,7 +1,5 @@
 
 
-
-
 const NewCourseView = (props) => {
   const { handleChange, handleSubmit } = props;
 
@@ -29,7 +27,7 @@ const NewCourseView = (props) => {
           <br/>
           <br/>
 
-          <button type="submit" onClick={(e) => handleSubmit(e)}>
+          <button type="submit">
             Submit
           </button>
           <br/>
