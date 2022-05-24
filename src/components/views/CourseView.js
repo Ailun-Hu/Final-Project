@@ -25,7 +25,7 @@ const CourseView = (props) => {
           <br/>
 
           <button type="submit">
-            Submit
+            Change
           </button>
           <br/>
           <br/>

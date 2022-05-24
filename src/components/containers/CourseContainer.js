@@ -4,6 +4,7 @@ import { Redirect } from "react-router-dom";
 import { fetchCourseThunk, editCourseThunk, deleteCourseThunk } from "../../store/thunks";
 import { CourseView } from "../views";
 
+
 class CourseContainer extends Component {
   componentDidMount() {
     //getting course ID from url
@@ -59,6 +60,7 @@ handleSubmit = async event => {
         handleChange={this.handleChange}
         handleSubmit={this.handleSubmit}
         removeCourse={this.removeCourse}
+        
       />
     );
   }

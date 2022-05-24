@@ -1,15 +1,14 @@
-
+import "../../mainpage.css"
 
 import { Link } from 'react-router-dom';
 
 
-
 const HomePageView = () => {
   return (
-    <div>
-      <h6>Final Project</h6>
-      <Link to={'/instructors'} > All Instructors </Link>
-      <Link to={'/courses'} > All Courses </Link>
+    <div id="mainpage" >
+      <h2>Cuny First Clone</h2>
+      <Link to={'/instructors'} className="link" > All Instructors </Link><br></br>
+      <Link to={'/courses'} className="link"> All Courses </Link>
       
     </div>
   );    

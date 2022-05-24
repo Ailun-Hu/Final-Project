@@ -35,8 +35,8 @@ const InstructorView = (props) => {
             </div>
           );
         })}</div>
-
-        <div >
+      </div>
+      <div  style={{padding: "100px"}}>
         <form style={{textAlign: 'center'}} onSubmit={(e) => handleSubmit(e)}>
             <label style= {{color:'#11153e', fontWeight: 'bold'}}>FirstName: </label>
             <input type="text" name="firstname" onChange ={(e) => handleChange(e)} />
@@ -59,15 +59,14 @@ const InstructorView = (props) => {
             <br/>
   
             <button type="submit">
-              Submit
+              Change
             </button>
             <br/>
             <br/>
           </form>
-        </div>
-        <button onClick={() => removeInstructor()}>delete</button>
-
+          <button onClick={() => removeInstructor()}>delete</button>
       </div>
+
 
   
     </div>
